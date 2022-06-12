@@ -12,5 +12,25 @@ const DELETE_VEHICLE_MUTATION = gql`
     }
 `;
 
+const ADD_VEHICLE = gql`
+    mutation addVehicle($name: String!, $brand: String!, $model: String!, $rentalCost: Float!, $isRented: Boolean!,  $clientId: ID!){
+        addVehicle(name: $name, brand: $brand, model: $model, rentalCost: $rentalCost, isRented: $isRented, clientId: $clientId){
+            id
+            name
+            brand
+            model
+            rentalCost
+            isRented
+            client{
+                id
+                name
+                email
+                phone
+                location
+            }
+        }
+    }
+`;
 
-export { DELETE_VEHICLE_MUTATION };
+
+export { DELETE_VEHICLE_MUTATION, ADD_VEHICLE };

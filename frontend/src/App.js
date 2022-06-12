@@ -7,6 +7,7 @@ import {
 import Vehicles from "./components/Vehicles";
 import React from 'react';
 import AddVehicle from "./components/AddVehicle";
+import AddCustomer from "./components/AddCustomer";
 
 
 const cache = new InMemoryCache();
@@ -23,6 +24,7 @@ function App() {
       <div className="container">
         <AddVehicle />
         <Vehicles />
+        <AddCustomer />
       </div>    
     </ApolloProvider>
   );
